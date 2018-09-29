@@ -1,0 +1,18 @@
+.img-thumbnail{
+    height: 140px;
+	
+}
+
+ .imgwrap{
+     border: 1px dashed #ccc;
+     display: table-cell;
+     vertical-align: middle;
+	 text-align: center;
+ }
+
+.cspan{
+	 display:inline-block;
+	 width:100px;
+	
+}
+

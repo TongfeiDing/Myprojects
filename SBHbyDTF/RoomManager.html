@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>RoomManager</title>
+<link rel="stylesheet" href="RoomManager.css">
+<script src="jquery.min.js"></script>
+<script  src="RoomManager.js"></script>
+<script  src="ajaxfunction.js"></script>
+</head>
+
+<body id="roomManager">
+	<div id="header">
+	<div class="headerContent"><h1 style="margin-top:5px;">Room Management</h1></div>
+	<idv class="headerContent"><button id="toCustomer" onClick="toCustomer()">Customer Management</button></idv>		
+	</div>
+	<div id="content">
+	
+	<div id="modifyRoom">
+		<form action="/" method="post">
+		<div class="modiLine"  >
+              <label>
+                Room Number<span class="req">*</span>
+              </label>
+              <input type="text" name="sroomID" id="sroomID" readonly required autocomplete="off" />
+            </div>
+        
+            <div class="modiLine">
+              <label>
+                Type<span class="req">*</span>
+              </label>
+              <input type="text" name="type" id="type" required autocomplete="off"/>
+            </div>
+            <div class="modiLine">
+              <label>
+                Price<span class="req">*</span>
+              </label>
+              <input type="text" name="price" id="price" required autocomplete="off"/>
+            </div>
+            <div class="modiLine">
+              <label>
+                Available(0/1)<span class="req">*</span>
+              </label>
+              <input type="text" name="available" id="available" required autocomplete="off"/>
+            </div>
+             <div class="modiLine">
+            <button type="button" name="addroom" onClick="ajaxrequest('http://localhost/SBHbyDTF/roomedit.php','action=add&'+passValues(),'result',1);" class="actionButton">Add</button> 
+            <button type="button" name="updateroom" onClick="ajaxrequest('http://localhost/SBHbyDTF/roomedit.php','action=update&'+passValues(),'result',1);" class="actionButton">Update</button>   
+            </div>
+		</form>
+	</div>
+	
+	
+	
+	
+	
+		<div id="action">
+
+			<button id="viewAllRoom" onClick="ajaxrequest('http://localhost/SBHbyDTF/roomedit.php','action=view','result',1);" type="button"  class="actionButton">View all rooms</button>
+ 
+            <button id="addNewRoom"  type="button"  onClick="getTable();" class="actionButton">Add New</button>
+
+			<button id="changeDetail" type="button"  onClick="getTable();" class="actionButton">Modify</button> 
+            
+             
+              <label>
+                Room ID<span class="req">*</span>
+              </label>
+              <input type="text" name="roomID" id="roomID" onkeyup="document.getElementById('sroomID').value=this.value" onblur="document.getElementById('sroomID').value=this.value" required autocomplete="off" />
+            
+        	<div id="inline" >
+            <div class="line">
+				<button type="button" onClick="ajaxrequest('http://localhost/SBHbyDTF/roomedit.php','action=find&'+passValues(),'result',1);" class="actionButton">Search a room</button> 
+            </div>  
+             <div class="line">
+				<button type="button" 
+                 onClick="ajaxrequest('http://localhost/SBHbyDTF/roomedit.php','action=remove&'+passValues(),'result',1);"
+                 class="actionButton">Remove a room</button> 
+            </div> 
+				</div>
+
+		</div>
+		<div id="result">
+			<table id="resulttable"></table>
+		</div>
+	</div>
+	
+</body>
+</html>

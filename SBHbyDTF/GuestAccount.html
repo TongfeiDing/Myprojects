@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>GuestAccount</title>
+<script src="jquery.min.js"></script>
+<script src="GuestAccount.js"></script>
+<script  src="ajaxfunction.js"></script>
+<link rel="stylesheet" href="GuestAccount.css">
+</head>
+
+<body id="guestAccount" onLoad="document.getElementById('detail').innerHTML='Welcome!CustomerID '+getCookie('username');">
+	<div id="header">
+	<div class="headerContent"><h1 style="margin-top:5px;">Guest Account</h1></div>
+	<idv class="headerContent"><button class="topItem" onClick="reserveRoom()">Book a Room</button></idv>
+	<idv class="headerContent"><button class="topItem" onClick="logout()">Logout</button></idv>		
+	</div>
+	<div id="content">
+	<div id="detail"><b></b>
+		
+		
+	</div>	
+	<button type="button" onClick="ajaxrequest('customeredit.php','action=findID&customerID='+getCookie('username'),'result',1);" >Show account details</button>
+	<button type="button" onClick="ajaxrequest('reservationedit.php','action=customerfilter&customerID='+getCookie('username'),'result',1);" >Show your reservation</button>
+	
+		<div id="result">  </div></div>
+		
+		
+</body>
+</html>

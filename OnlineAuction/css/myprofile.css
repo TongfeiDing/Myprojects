@@ -1,0 +1,15 @@
+.myphoto{
+    height: 200px;
+	width: 300px;
+}
+
+
+ .imgwrap{
+     border: 1px dashed #ccc;
+     display: table-cell;
+     vertical-align: middle;
+	 text-align: center;
+	 overflow: hidden;
+	 height: 200px;
+	 width: 200px;
+ }

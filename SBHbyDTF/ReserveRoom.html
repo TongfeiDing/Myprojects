@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ReserveRoom</title>
+<script src="jquery.min.js"></script>
+<script src="ReserveRoom.js"></script>
+<script  src="ajaxfunction.js"></script>
+<link rel="stylesheet" href="ReserveRoom.css">
+</head>
+
+<body id="reserveRoom">
+	<div id="header">
+	<div class="headerContent"><h1 style="margin-top:5px;">Reserve Room</h1></div>
+	<idv class="headerContent"><button id="goback" onClick="back()">Go Back</button></idv>		
+	</div>
+	
+	<div id="content">
+	<div id="searchPart">
+				<div class="row">
+				Start Date: <input type="date" name="startdate" id="startdate" required autocomplete="off">
+
+
+				End Date: <input type="date" name="enddate" id="enddate" required autocomplete="off" >
+
+				<button type="button" name="search" onClick="ajaxrequest('booking.php','action=search&'+passsearchValues(),'result',1);">SEARCH</button> 
+				</div>
+				<div class="row">
+				Sort By
+						<input type="text" name="sort" id="sort" list="options">
+						<datalist id="options">
+							<option value="low to high" label="Price(Low to Hight)"></option>
+							<option value="high to low" label="Price(High to Low)"></option>
+						</datalist>
+
+						<button type="submit"  name="submit" >SUBMIT</button> 
+				</div>
+				<div class="row">
+				Filter
+						<input type="text" name="filter" id="filter" list="types">
+						<datalist id="types">
+							<option value="s" label="sroom"></option>
+							<option value="m" label="mroom"></option>
+							<option value="l" label="lroom"></option>
+							<option value="k" label="kroom"></option>
+						</datalist>
+
+						<button type="button"  name="submit" onClick="ajaxrequest('booking.php','action=advancedsearch&'+passsearchValues(),'result',1);" >SUBMIT</button> 
+				</div>
+				<div class="row">
+						<button type="submit"  onClick="getTable();" name="submit" >BOOK A ROOM</button> 
+				</div>
+				
+				<div id="bookRoom">
+				<div class="row">
+              <label>
+                Start Date<span class="req">*</span>
+              </label>
+              <input type="Date" name="startdate" id="rstartdate" required autocomplete="off"/>
+				</div>
+				<div class="row">
+              <label>
+                End Date<span class="req">*</span>
+              </label>
+              <input type="date" name="enddate" id="renddate" required autocomplete="off"/>
+				</div>
+				<div class="row">
+              <label>
+                RoomID<span class="req">*</span>
+              </label>
+              <input type="text" name="roomnumber" id="rroomID" required autocomplete="off"/>
+				</div>
+				<div class="row">
+
+            <button type="button" name="submit" onClick="ajaxrequest('booking.php','action=reserve&'+passreserveValues(),'result',1);" class="button button-block">submit</button>  
+					</div>
+	</div>
+
+				
+		
+</div>
+		<div id="resultbox">
+		<table id="result"></table>
+			
+		</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+@charset "utf-8";
+/* CSS Document */
+#reserveRoom{
+	margin:0;
+}
+
+#header{
+	position: relative;
+	height:60px;
+	width:100%;
+	top:0;
+	background-color: purple;
+	display:inline-block;
+}
+.headerContent{
+	float: left;
+	text-align: top;
+	margin-left: 15px;
+}
+#goback{
+	margin-left: 15px;
+	border: 0;
+  outline: none;
+  border-radius: 0;
+  padding: 10px 0;
+  font-size: 1.5rem;
+  background-color: purple;
+	
+}
+#goback:hover{
+	background-color: mediumpurple;
+}
+.actionButton{
+	width:100%;
+	margin-left: 10px;
+	
+	border: 0;
+  outline: none;
+  border-radius: 0;
+  font-size: 1rem;
+  background-color: mediumpurple;
+}
+.actionButton:hover{
+	background-color: rebeccapurple;	
+}
+
+.booking{
+	position: relative;
+	display:inline-block;
+	
+}
+.condition{
+	float:left;
+}
+#searchPart{
+	position: relative;
+	margin-left: 0;
+	float: left;
+	width:30%;
+	background-color: pink;
+	z-index:400;
+}
+#result{
+	position: relative;
+	float:left;
+	width: 70%;
+	height:400px;
+	margin-right: 0%;
+	background-color: green;
+}
+#bookRoom{
+	display: none;
+	background-color: hotpink;
+}

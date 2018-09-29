@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CustomerManager</title>
+<link rel="stylesheet" href="CustomerManager.css">
+<script src="jquery.min.js"></script>
+<script  src="CustomerManager.js"></script>
+<script  src="ajaxfunction.js"></script>
+</head>
+
+<body id="customerManager">
+	<div id="header">
+	<div class="headerContent"><h1 style="margin-top:5px;">Customer Management</h1></div>
+	<idv class="headerContent"><button class="toRoom" onClick="toRoom()">Room Management</button></idv>
+	<idv class="headerContent"><button class="toRoom" onClick="logout()">Log out</button></idv>		
+	</div>
+	
+	<div id="content">
+	
+		<div class="modifyCustomer" id="enterRoomID">
+			<div class="modiLine"  >
+              <label>
+                CustomerID<span class="req">*</span>
+              </label>
+              <input style="background-color: gray;" type="text" name="customerID"  id="ncustomerID" required autocomplete="off" />
+            </div>
+            <div class="modiLine"  >
+              <button type="button"  onClick="ajaxrequest('reservationedit.php','action=customerfilter&customerID='+document.getElementById('ncustomerID').value,'result',1);">Submit</button>
+            </div>
+		</div>
+		<div class="modifyCustomer" id="modiDetail">
+		<div class="modiLine"  >
+              <label>
+                CustomerID<span class="req">*</span>
+              </label>
+              <input style="background-color: gray;" type="text" name="customerID"  id="customerID" required autocomplete="off" />
+            </div>
+            
+		<div class="modiLine"  >
+              <label>
+                First Name<span class="req">*</span>
+              </label>
+              <input type="text" name="nfirstname" id="nfirstname" required autocomplete="off" />
+            </div>
+        
+            <div class="modiLine">
+              <label>
+                Last Name<span class="req">*</span>
+              </label>
+              <input type="text" name="nlastname" id="nlastname" required autocomplete="off"/>
+            </div>
+            <div class="modiLine">
+              <label>
+                Level<span class="req">*</span>
+              </label>
+              <input type="text" name="level" id="level" required autocomplete="off"/>
+            </div>
+            <div class="modiLine">
+              <label>
+                Email<span class="req">*</span>
+              </label>
+              <input type="email" name="emailaddress" id="emailaddress" required autocomplete="off"/>
+            </div>
+            <div class="modiLine">
+              <label>
+                Phone Number<span class="req">*</span>
+              </label>
+              <input type="text" name="phonenumber" id="phonenumber" required autocomplete="off"/>
+            </div>
+            <div class="modiLine">
+              <label>
+                Password<span class="req">*</span>
+              </label>
+              <input type="password"  id="password" required autocomplete="off"/>
+            </div>
+             <div class="modiLine">
+            <button type="button" name="submit" onClick="ajaxrequest('customeredit.php','action=update&'+passcustomerValues(),'result',1);"
+            class="actionButton">submit</button>  
+            </div>
+	</div>
+	
+		<div class="modifyCustomer" id="modiReservation">         
+		<div class="modiLine"  >
+              <label>
+                OrderID<span class="req">*</span>
+              </label>
+              <input type="text" name="orderID" id="orderID" required autocomplete="off" />
+            </div>
+        
+            <div class="modiLine">
+              <label>
+                CustomerID<span class="req">*</span>
+              </label>
+              <input type="text" name="customerID" id="nncustomerID" required autocomplete="off"/>
+            </div>
+            <div class="modiLine">
+              <label>
+                RoomID<span class="req">*</span>
+              </label>
+              <input type="text" name="roomID" id="nnroomID" required autocomplete="off"/>
+            </div>
+            <div class="modiLine">
+              <label>
+                Start Date<span class="req">*</span>
+              </label>
+              <input type="Date" name="startdate" id="startdate" required autocomplete="off"/>
+            </div>
+            <div class="modiLine">
+              <label>
+                End Date<span class="req">*</span>
+              </label>
+              <input type="date" name="enddate" id="enddate" required autocomplete="off"/>
+            </div>
+            <div class="modiLine">
+              <label>
+                Currentstatus<span class="req">*</span>
+              </label>
+              <input type="text" name="currentstatus" id="currentstatus" required autocomplete="off"/>
+            </div>
+            
+             <div class="modiLine">
+            <button type="button" name="submit" onClick="ajaxrequest('reservationedit.php','action=update&'+passreservationValues(),'result',1);" class="actionButton">submit</button>  
+            </div>
+
+	</div>
+	
+	
+	
+		<div id="action">	
+			<button id="viewallcustomer"  type="button" name="viewallcustomer" onClick="ajaxrequest('customeredit.php','action=view','result',1);" class="actionButton">View ALL Customers</button> 
+
+		
+			<div id="inline">
+            <div class="line"  >
+              <label>
+                First Name<span class="req">*</span>
+              </label>
+              <input type="text" name="firstname" id="firstname" required autocomplete="off" />
+            </div>
+        
+            <div class="line">
+              <label>
+                Last Name<span class="req">*</span>
+              </label>
+              <input type="text" name="lastname" id="lastname" required autocomplete="off"/>
+            </div>
+            </div>
+            
+ 
+
+          <button type="button" name="findcustomer" id="findcustomer" onClick="ajaxrequest('customeredit.php','action=find&'+passName(),'result',1);" class="actionButton">Find a customer</button> 
+
+          <button type="button" name="searchreservation" onClick="showIDInput();" class="actionButton">Search reservation</button> 
+
+          <button type="button" name="modifydetail" onClick="getTable();" class="actionButton">Modify customer's details</button>
+          
+          <button type="submit" name="modifyreservation" onClick="getTableReservation();" class="actionButton">Modify reservation</button>
+
+      
+	</div>
+
+		<div id="result"></div>
+		<table id="resulttable"></table>
+	</div>
+	
+</body>
+</html>

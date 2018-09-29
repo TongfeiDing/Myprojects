@@ -1,0 +1,116 @@
+@charset "utf-8";
+/* CSS Document */
+#customerManager{
+	margin:0;
+}
+#header{
+	position: relative;
+	height:60px;
+	width:100%;
+	top:0;
+	background-color: purple;
+	display:inline-block;
+}
+.headerContent{
+	float: left;
+	text-align: top;
+	margin-left: 15px;
+}
+.toRoom{
+	margin-left: 15px;
+	border: 0;
+  outline: none;
+  border-radius: 0;
+  padding: 10px 0;
+  font-size: 1.5rem;
+  background-color: purple;
+	
+}
+.toRoom:hover{
+	background-color: mediumpurple;
+}
+
+#content{
+	position: relative;
+	display: inline-block;
+	background-color: green;
+	height:400px;
+	width:100%;
+	z-index: 100;
+}
+#action{
+	position: relative;
+	float:left;
+	width: 30%;
+	background-color: yellow;
+	z-index: 111;
+}
+#result{
+	position: relative;
+	float:left;
+	width:70%;
+	background-color: pink;
+	height:350px;
+	z-index: 333;
+	
+}
+.actionButton{
+	width:85%;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	border: 0;
+  outline: none;
+  border-radius: 0;
+  padding-bottom: 15px;
+  font-size: 1.5rem;
+  background-color: mediumpurple;
+}
+.actionButton:hover{
+	background-color: rebeccapurple;	
+}
+#inline{
+	width: 100%;
+	margin-top: 10px;
+	display: inline-block;
+}
+.line{
+	width:45%;
+	float:left;
+	padding-left: 15px;
+	padding-bottom: 25px;
+}
+
+#modifyCustomer{
+	position:absolute;
+	text-align: center;
+	top:300px;
+	width:30%;
+	margin-left: 0%;
+	margin-right: 30%;
+	background-color: deeppink;
+	z-index: 300;
+	border-radius: 15px;
+
+}
+#modifyCustomer .modiLine {
+  width:60%;
+	margin-left: 20%;
+	margin-right:20%;
+  position: relative;
+  margin-bottom: 5px;
+}
+#modiDetail{
+	display:none;
+}
+#modiReservation{
+	display:none;
+}
+#enterRoomID{
+	display:none;
+}
+
+
+
+
+
+

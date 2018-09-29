@@ -1,0 +1,16 @@
+/* CSS Document */
+.img-thumbnail{
+    height: 200px;
+	
+}
+
+ .imgwrap{
+     display: table-cell;
+     vertical-align: middle;
+	 text-align: center;
+ }
+
+.cspan{
+	 display:inline-block;
+	 width:100px;
+}

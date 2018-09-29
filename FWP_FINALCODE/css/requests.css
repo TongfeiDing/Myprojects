@@ -1,0 +1,134 @@
+
+body{
+
+  background: #ddd;
+  background: #fafafa;
+}
+
+main.content{
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  text-align: center;
+}
+
+main.content .list{
+  max-width: 800px;
+  width: 800px;
+  margin: 10px auto;
+}
+
+@media (max-width: 768px){
+  main.content .list{
+    max-width: 90%;
+    width: 90%;
+  }
+}
+
+.transaction{
+  padding: 5px;
+  height: 250px;
+  background: #fff;
+  box-shadow: 5px 5px 5px #ccc;
+  margin-bottom: 15px;
+}
+
+.transaction div.image{
+  float: left;
+  display: inline-block;
+  width: 30%;
+  text-align: center;
+}
+.transaction div.image div.item-image{
+  background: url('../images/item-noimage.jpg');
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  margin: 20px auto;
+  background-position: center center;
+  background-size: cover;
+}
+
+.trans-info{
+  width: 70%;
+  padding: 20px;
+  display: inline-block;
+  text-align: left;
+  position: relative;
+}
+
+p.no-trans{
+  font-size: 22px;
+  color: #EB5757;
+}
+
+@media (max-width: 768px){
+  .transaction{
+    height: 200px;
+    position: relative;
+    padding: 0px;
+  }
+
+  .transaction div.image{
+    float: none;
+    width: 100%;
+  }
+  .transaction div.image div.item-image{
+    width: 100%;
+    height: 200px;
+    margin: 0;
+  }
+
+  .trans-info{
+    width:  100%;
+    text-align: left;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: rgba(255, 255, 255, 0.8)
+  }
+}
+
+.tag-label{
+  font-weight: bold;
+}
+
+.item-info .tag-label{
+  color: #EB5757;
+  font-size: 18px;
+}
+
+div.trans-date{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #EB5757;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+div.user-info{
+  position: absolute;
+  bottom: -20px;
+  right: 10px;
+}
+
+.username-field mark{
+  cursor: pointer;
+}
+
+@media (max-width: 768px){
+  .item-info .tag-label{
+    font-size: 16px;
+  }
+
+  div.trans-date{
+    font-size: 18px;
+    font-weight: normal;
+  }
+
+  div.user-info{
+    bottom: 0px;
+  }
+}

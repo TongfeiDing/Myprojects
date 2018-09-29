@@ -1,0 +1,19 @@
+.img-thumbnail{
+    height: 300px;
+	
+}
+
+ .imgwrap{
+     border: 1px dashed #ccc;
+     display: table-cell;
+     vertical-align: middle;
+	 text-align: center;
+ }
+
+#myCarousel{
+	height:300px;
+}
+
+.carousel{
+	height:300px;
+}

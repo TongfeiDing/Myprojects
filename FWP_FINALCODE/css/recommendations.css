@@ -1,0 +1,131 @@
+
+body{
+  background: #ddd;
+  background: #fafafa;
+}
+
+main.content{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  background: #fafafa;
+  margin-left: 0;
+}
+
+main.content .info-content{
+  max-width: 1100px;
+  width: 100%;
+  margin: 0px auto;
+  background: white;
+  min-height: 100vh;
+}
+
+@media (max-width: 768px){
+  main.content .info-content{
+    max-width: 90%;
+    width: 90%;
+  }
+}
+
+section.recom-area{
+  width: 100%;
+}
+
+div.chart-zone{
+  display: inline-block;
+  width: 70%;
+  padding: 10px;
+}
+
+div.recom-zone{
+  display: inline-block;
+  width: 30%;
+  padding: 10px;
+}
+
+@media (max-width: 768px){
+  div.chart-zone{
+    width: 100%;
+  }
+
+  div.recom-zone{
+    width: 100%;
+  }
+}
+
+div.recom-zone h4{
+  font-weight: bold;
+}
+
+.area-cat{
+  float: left;
+}
+
+.area-day{
+  float: right;
+}
+
+.cat-combination{
+  padding: 10px;
+}
+
+.cat-combination p{
+  margin: 0;
+  padding: 10px;
+  width: 100%;
+  color: white;
+  font-weight: bold;
+}
+
+.cat1{
+  background: #B3202E;
+}
+
+.cat2{
+  background: #EB5757;
+}
+
+.cat3{
+  background: #FF8984;
+}
+
+.days-combination p{
+  width: 100%;
+  background: #EB5757;
+  color: white;
+  font-size: 38px;
+  font-weight: bold;
+  margin-top: 150px;
+}
+
+@media (max-width: 768px){
+  .days-combination p{
+    margin-top: 50px;
+  }
+}
+
+.not-enough{
+  font-size: 20px;
+  color: red;
+}
+
+section.period-selector{
+  width: 100%;
+  text-align: left;
+}
+section.period-selector label
+{
+  display: inline-block;
+  font-size: 28px;
+  font-weight: normal;
+  color: #EB5757;
+  margin-top: 5px;
+  margin-left: 20px;
+}
+
+section.period-selector > div
+{
+  display: inline-block;
+  bottom: 6px;
+}

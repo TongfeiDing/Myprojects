@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* CSS Document */
+#guestAccount{
+	margin:0;
+}
+#header{
+	position: relative;
+	height:60px;
+	width:100%;
+	top:0;
+	background-color: purple;
+	display:inline-block;
+}
+.headerContent{
+	float: left;
+	text-align: top;
+	margin-left: 15px;
+}
+.topItem{
+	margin-left: 15px;
+	border: 0;
+  outline: none;
+  border-radius: 0;
+  padding: 10px 0;
+  font-size: 1.5rem;
+  background-color: purple;
+	
+}
+.topItem:hover{
+	background-color: mediumpurple;
+}
+#content{
+	position: relative;
+	display: inline-block;
+	background-color: green;
+	height:400px;
+	width:100%;
+	z-index: 100;
+}
+#detail{
+	position: relative;
+	font-size:5rem;
+	float:left;
+	width: 30%;
+	background-color: yellow;
+	height:400px;
+	z-index: 111;
+	text-align: center;
+}
+#order{
+	position: relative;
+	float:left;
+	width:70%;
+	background-color: pink;
+	height:350px;
+	z-index: 111;
+	text-align: center;
+}

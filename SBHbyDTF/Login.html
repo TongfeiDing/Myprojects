@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Login</title>
+<link rel="stylesheet" href="Login.css">
+<script src="jquery.min.js"></script>
+<script  src="login.js"></script>
+<script  src="ajaxfunction.js"></script>
+
+</head>
+
+<body id="mainPage">
+<div id="backgroundHeader">
+	
+</div>
+
+<div id="banner">
+	<div class="flashBanner">
+		<img class="bigImg" width="100%" height="100%" />
+		<div class="mask">
+			<img src="btngallery.jpg" uri="img1.jpg" link="*"  width="35" height="15" />
+			<img src="btngallery.jpg" uri="img2.jpg" link="*"  width="35" height="15"/>
+			<img src="btngallery.jpg" uri="img3.jpg" link="*"  width="35" height="15"/>
+			<img src="btngallery.jpg" uri="img4.jpg" link="*"  width="35" height="15"/>
+		</div>
+	</div>
+</div>
+
+
+	<div id="content">
+		<div id="header">
+		<div class="headerContent">
+			<h1 style="margin-top: auto;">Sunny Beach Hotel</h1>
+			</div>
+			<div class="headerContent" style="float: right;">
+			<button class="headerButton" id="signUp" onClick="presentSignUp();" >Sign Up</button>
+			<button class="headerButton" id="logIn" onClick="presentLogIn();">Log In</button>
+			</div>
+		</div>
+		<div id="welcome">
+			<h1>Welcome To Our Amazing Hotel</h1>
+			<h2>Sunny Beach Hotel </h2>
+			<h2>Focusing on Bringing You The SunShine</h2>
+		</div>
+		<div class="loginPage">
+			<div class="loginPage" id="signup">
+				<h1>Join Us!</h1>          
+            <div class="info">
+              <label>
+                First Name<span class="req">*</span>
+              </label>
+              <input type="text" name="firstname" required autocomplete="off" />
+            </div>
+        
+            <div class="info">
+              <label>
+                Last Name<span class="req">*</span>
+              </label>
+              <input type="text" name="lastname" required autocomplete="off"/>
+            </div>
+          <div class="info">
+            <label>
+              Email Address<span class="req">*</span>
+            </label>
+            <input type="email" name="emailaddress" required autocomplete="off"/>
+          </div>
+          
+          <div class="info">
+            <label>
+              Set A Password<span class="req">*</span>
+            </label>
+            <input type="password" name="password" required autocomplete="off"/>
+          </div>
+          
+          <button class="button button-block" type="button" onClick="ajaxrequest('register.php',registerValues(),null,2);" name="register">Get Started</button>
+          
+			</div>
+			<div class="loginPage" id="login">
+				<h1>Welcome Back!</h1>          
+            <div class="info">
+            <label>
+              Your Account<span class="req">*</span>
+            </label>
+            <input type="text" name="emailaddress" id = "emailaddress" value = "emailaddress/adminusername" style="color:gray" onfocus="if(this.value=='emailaddress/adminusername'){this.value=''};this.style.color='black';" onblur="if(this.value==''||this.value=='emailaddress/adminusername'){this.value='emailaddress/adminusername';this.style.color='gray';}" required autocomplete="off"/>
+          </div>
+          
+          <div class="info">
+            <label>
+              Password<span class="req">*</span>
+            </label>
+            <input type="password" name="password" id = "password" required autocomplete="off"/>
+          </div>
+                 	
+          <button class="button button-block" type="button" onClick="ajaxrequest('login.php',loginValues(),null,2);" name="login">Log In</button>
+
+			</div>
+			
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+footer.site-footer{
+  background-color: #B3202E;
+  padding-top: 40px;
+  margin-top: 20px;
+}
+
+footer .content > div{
+  color: white;
+  padding: 0px 20px;
+  font-size: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  footer .content > div{
+    width: 33.3%;
+    float:left;
+  }
+}
+
+footer h3{
+  color: white;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  margin-bottom: 20px;
+}
+footer h3 span{
+  color: #FF8984;
+}
+
+footer .last-tweets ul li{
+  margin-bottom: 10px;
+}
+
+footer nav.social-media {
+  text-align: left;
+}
+
+p.copyright{
+  background-color: #EB5757;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin: 0;
+}
